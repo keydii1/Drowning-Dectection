@@ -18,7 +18,12 @@ Tài liệu này lưu lại toàn bộ các thử nghiệm theo quy chuẩn khoa
 
 ---
 
-## 2. Chi tiết Nhật ký Từng Experiment
+### EXP-000: Pipeline Sanity & Environment Verification
+- **Ngày chạy:** 2026-09-26
+- **Môi trường & Phần cứng:** Apple Silicon Mac (ARM64), Python 3.13.11 in `.venv`, PyTorch 2.14, Ultralytics 8.4 (YOLO11n), Supervision 0.30 (ByteTrack)
+- **Tập dữ liệu:** `datasets/raw/demo_pool_sample.mp4` (150 frames, 640x480, 30 fps)
+- **Kết quả:** Xử lý thành công 150/150 frames, xuất video có chú thích tại `results/videos/output_annotated.mp4`.
+- **Trạng thái:** ✅ PASSED. Toàn bộ luồng kết nối YOLO -> ByteTrack -> Temporal Filter -> Video Visualizer hoạt động trơn tru.
 
 ### EXP-001: Baseline Detection
 - **Ngày chạy:** Chưa
