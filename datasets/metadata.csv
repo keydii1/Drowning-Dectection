@@ -1,0 +1,6 @@
+video_id,source,scene,camera_angle,lighting,number_of_people,water_condition,scenario,label,difficulty,split,fps,duration_sec,notes
+V001,roboflow,outdoor_pool,high_angle,daylight,1,calm,swimming,normal,easy,train,30,15,Standard freestyle swimming
+V002,kaggle_lifeguard,indoor_pool,overhead,artificial_light,3,moderate_ripples,playing,normal,medium,train,25,20,Children playing and moving around
+V003,figshare,outdoor_pool,side_angle,glare,1,splashing,splash,normal,hard,hard_negative_test,30,12,Violent splashing causing water turbulence
+V004,self_collected,indoor_pool,front_angle,low_light,2,calm,diving,normal,hard,hard_negative_test,30,18,Underwater diving breath holding
+V005,roboflow,outdoor_pool,high_angle,daylight,1,ripples,drowning,drowning,hard,test,30,22,Instinctive drowning response followed by submerging

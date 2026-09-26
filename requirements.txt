@@ -1,0 +1,24 @@
+# Core Deep Learning & Computer Vision
+ultralytics>=8.3.0
+torch>=2.2.0
+torchvision>=0.17.0
+opencv-python>=4.9.0
+
+# Tracking & Spatio-Temporal
+supervision>=0.22.0
+scipy>=1.11.0
+
+# Data Manipulation & Metrics
+numpy>=1.26.0
+pandas>=2.2.0
+scikit-learn>=1.4.0
+
+# Visualization & Reporting
+matplotlib>=3.8.0
+seaborn>=0.13.0
+tqdm>=4.66.0
+pyyaml>=6.0.1
+
+# Notebooks & Development
+jupyterlab>=4.1.0
+ipywidgets>=8.1.0

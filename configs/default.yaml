@@ -1,0 +1,27 @@
+# Default Configuration for Drowning Detection & False Alarm Reduction
+
+model:
+  name: "yolo11n.pt"           # Candidate baseline model
+  task: "detect"
+  imgsz: 640
+  conf_threshold: 0.35
+  iou_threshold: 0.45
+  device: "cpu"                # "cuda" or "mps" (Mac) or "cpu"
+
+tracking:
+  tracker_type: "bytetrack"    # "bytetrack" or "botsort"
+  track_high_thresh: 0.5
+  track_low_thresh: 0.1
+  new_track_thresh: 0.6
+  track_buffer: 30             # Keep lost tracks for 30 frames
+  match_thresh: 0.8
+
+temporal_filtering:
+  window_size_frames: 30       # e.g., 1 second at 30 fps
+  persistence_threshold_sec: 2.0 # Minimum continuous drowning detection before triggering alert
+  sliding_window_ratio: 0.7    # At least 70% positive frames within window
+  min_motion_variance: 0.05    # Filter out static artifacts or reflections
+
+alert:
+  max_latency_allowed_sec: 15.0 # Max latency before system alert meets ASTM F3698-24
+  cooldown_sec: 10.0            # Prevent alert spamming for the same person
