@@ -1,0 +1,9 @@
+# Underwater Drowning Detection Dataset (Figshare)
+path: /Users/hohoangson/Documents/SienceResearch/datasets/raw/underwater_drowning
+train: images/train
+val: images/val
+
+names:
+  0: swimming
+  1: struggling
+  2: drowning

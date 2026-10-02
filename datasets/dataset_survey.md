@@ -84,3 +84,40 @@ Theo quy định trong **Mục 10 & 12 của plan.md**:
 
 ## 4. Quy chuẩn Metadata cho Video (`metadata.csv`)
 Tất cả video/tập dữ liệu đưa vào dự án phải được lập chỉ mục trong file [metadata.csv](file:///Users/hohoangson/Documents/SienceResearch/datasets/metadata.csv).
+
+---
+
+## 5. Hướng Dẫn Tải & Huấn Luyện với 3 Bộ Datasets Đã Tích Hợp
+
+### 1️⃣ Figshare: Underwater Drowning Detection Dataset (Đã tải sẵn)
+- **Link:** [Figshare Article](https://figshare.com/articles/dataset/Underwater_Drowning_Detection_Dataset/29497235/2)
+- **Quy mô:** 5,613 ảnh (640x640), 3 nhãn YOLO: `0: swimming`, `1: struggling`, `2: drowning`.
+- **Tập Train/Val:** 4,488 ảnh train, 1,125 ảnh val.
+- **Thư mục lưu trữ:** `datasets/raw/underwater_drowning/`
+- **File cấu hình:** `datasets/raw/underwater_drowning/data.yaml`
+- **Chạy tải lại nếu cần:**
+  ```bash
+  .venv/bin/python3 datasets/download_figshare.py
+  ```
+- **Lệnh huấn luyện Baseline YOLO11:**
+  ```bash
+  .venv/bin/python3 experiments/train_baseline.py --epochs 50 --batch 16 --device mps
+  ```
+
+### 2️⃣ GitHub: Wang-Kaikai Drowning Detection Dataset
+- **Link:** [Wang-Kaikai/drowning-detection-dataset](https://github.com/Wang-Kaikai/drowning-detection-dataset)
+- **Quy mô:** 8,572 ảnh + 8,572 file nhãn YOLO trong thư mục `self-made dataset/`.
+- **Nhãn:** `['swimming', 'tread water', 'drowning']`.
+- **Lưu ý quan trọng về bộ nhớ:** Toàn bộ repo nặng **17.2 GB** do chứa nhiều file checkpoint models (`.pt`). Đã có script **Sparse Checkout** để chỉ tải thư mục dataset (~5-7 GB) mà không tải các file weights nặng:
+  ```bash
+  .venv/bin/python3 datasets/download_wang_kaikai.py
+  ```
+  *(Lưu ý: Ổ đĩa máy tính cần trống tối thiểu 7 GB trước khi chạy).*
+
+### 3️⃣ Roboflow Universe: DrowningDetectionTracking
+- **Link:** [Roboflow Universe](https://universe.roboflow.com/drowningdetectiontracking/drowningdetectiontracking)
+- **Quy mô:** ~9,530 ảnh, các lớp: `drowning`, `swimming`, `out of water`.
+- **Cách tải:** Do Roboflow yêu cầu API key, đăng ký tài khoản miễn phí và chạy:
+  ```bash
+  .venv/bin/python3 datasets/download_roboflow.py --api-key YOUR_ROBOFLOW_API_KEY
+  ```
