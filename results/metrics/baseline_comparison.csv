@@ -1,0 +1,7 @@
+mode_id,mode_name,total_frames,precision,recall,f1_score,false_alarm_events,false_alarm_rate_per_hour,event_recall,avg_detection_latency_sec,fps
+1,Mode 1: Raw YOLO Frame-level,1200,0.8061,0.4926,0.6115,29,2610.0,1.0,0.23,3171800.9
+2,Mode 2: YOLO + ByteTrack (Instantaneous),1200,0.8117,0.487,0.6088,27,2430.0,1.0,0.26,1352.0
+3,Mode 3: YOLO + Tracking + Fixed Consecutive (N=15),1200,1.0,0.0389,0.0749,0,0.0,0.6667,1.87,6724.4
+4,Mode 4: YOLO + Tracking + Sliding Window Ratio (W=30),1200,0.9468,0.4944,0.6496,6,540.0,0.6667,0.48,6656.3
+5,Mode 5: Kinematic Heuristics Baseline (Velocity + AR),1200,1.0,0.4037,0.5752,0,0.0,0.6667,0.48,6758.3
+6,Mode 6: Proposed Hybrid Spatio-Temporal Anomaly Detector,1200,1.0,0.413,0.5845,0,0.0,0.6667,0.73,5617.9

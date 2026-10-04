@@ -1,0 +1,80 @@
+[
+  {
+    "mode_id": 1,
+    "mode_name": "Mode 1: Raw YOLO Frame-level",
+    "total_frames": 1200,
+    "precision": 0.8061,
+    "recall": 0.4926,
+    "f1_score": 0.6115,
+    "false_alarm_events": 29,
+    "false_alarm_rate_per_hour": 2610.0,
+    "event_recall": 1.0,
+    "avg_detection_latency_sec": 0.23,
+    "fps": 3171800.9
+  },
+  {
+    "mode_id": 2,
+    "mode_name": "Mode 2: YOLO + ByteTrack (Instantaneous)",
+    "total_frames": 1200,
+    "precision": 0.8117,
+    "recall": 0.487,
+    "f1_score": 0.6088,
+    "false_alarm_events": 27,
+    "false_alarm_rate_per_hour": 2430.0,
+    "event_recall": 1.0,
+    "avg_detection_latency_sec": 0.26,
+    "fps": 1352.0
+  },
+  {
+    "mode_id": 3,
+    "mode_name": "Mode 3: YOLO + Tracking + Fixed Consecutive (N=15)",
+    "total_frames": 1200,
+    "precision": 1.0,
+    "recall": 0.0389,
+    "f1_score": 0.0749,
+    "false_alarm_events": 0,
+    "false_alarm_rate_per_hour": 0.0,
+    "event_recall": 0.6667,
+    "avg_detection_latency_sec": 1.87,
+    "fps": 6724.4
+  },
+  {
+    "mode_id": 4,
+    "mode_name": "Mode 4: YOLO + Tracking + Sliding Window Ratio (W=30)",
+    "total_frames": 1200,
+    "precision": 0.9468,
+    "recall": 0.4944,
+    "f1_score": 0.6496,
+    "false_alarm_events": 6,
+    "false_alarm_rate_per_hour": 540.0,
+    "event_recall": 0.6667,
+    "avg_detection_latency_sec": 0.48,
+    "fps": 6656.3
+  },
+  {
+    "mode_id": 5,
+    "mode_name": "Mode 5: Kinematic Heuristics Baseline (Velocity + AR)",
+    "total_frames": 1200,
+    "precision": 1.0,
+    "recall": 0.4037,
+    "f1_score": 0.5752,
+    "false_alarm_events": 0,
+    "false_alarm_rate_per_hour": 0.0,
+    "event_recall": 0.6667,
+    "avg_detection_latency_sec": 0.48,
+    "fps": 6758.3
+  },
+  {
+    "mode_id": 6,
+    "mode_name": "Mode 6: Proposed Hybrid Spatio-Temporal Anomaly Detector",
+    "total_frames": 1200,
+    "precision": 1.0,
+    "recall": 0.413,
+    "f1_score": 0.5845,
+    "false_alarm_events": 0,
+    "false_alarm_rate_per_hour": 0.0,
+    "event_recall": 0.6667,
+    "avg_detection_latency_sec": 0.73,
+    "fps": 5617.9
+  }
+]
